@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        window.statusBarColor = ContextCompat.getColor(this, android.R.color.background_dark)
+
 
         val weatherDataSource = WeatherDataSource()
         val weatherOnlineSource = WeatherOnlineDataSourceImpl(weatherDataSource)

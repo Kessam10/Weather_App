@@ -105,10 +105,9 @@ class DailyTempAdapter(private var dailyList: List<DailyWeatherEntity>) :
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun getDayOfWeek(dateString: String): String {
-        val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault())
-        val date = LocalDate.parse(dateString, formatter)
-        val dayName = date.dayOfWeek.getDisplayName(java.time.format.TextStyle.FULL, Locale.getDefault())
-        val dayOfMonth = date.dayOfMonth.toString().padStart(2, '0')
-        return "$dayName $dayOfMonth"
+        val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault())
+        val outputFormatter = DateTimeFormatter.ofPattern("MMM dd, yyyy", Locale.getDefault())
+        val date = LocalDate.parse(dateString, inputFormatter)
+        return date.format(outputFormatter)
     }
 }

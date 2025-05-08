@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WeatherApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+    </style>
+
+    <style name="AppTheme_Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Dark mode theme customizations -->
+    </style>
+
+    <style name="app_bg1">
+        <item name="android:background">@drawable/app_bg2</item>
+    </style>
+
+    <style name="app_bg2">
+        <item name="android:background">@drawable/app_bg4</item>
+    </style>
+
+    <style name="bottom_app_bar">
+        <item name="backgroundTint">@color/bottom_nav_color</item>
+    </style>
+</resources>
